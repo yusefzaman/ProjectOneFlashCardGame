@@ -6,50 +6,34 @@ GA SEI - Unit 1 Project
 
 ### By: Yusef Zaman
 
-#### [GitHub](https://github.com/NobodysLackey) | [LinkedIn](https://www.linkedin.com/in/michaelglackey/)
+#### [GitHub](https://github.com/yusefzaman) | [LinkedIn](https://www.linkedin.com/in/yusefzaman/)
 ***
 
 ### ***Description***
-#### A brief description of the project, what it's about, when and what you made it for, etc. ...
-***
 
-### ***Technologies Used***
-* Technology 1
-* Technology 2
-  * Sub-item 1
-  * Sub-item 2
-* Technology 3
+##### I am looking to code a memory flash game where the user will be shown on a grid pictures for a few seconds, and then it will go blank and the user will be asked to then click the boxes where the pictures were shown - this is a memory game to test to what level the user can remember where images were shown.
+
+##### The game will have three levels, where the time for which the images are shown will remain the same but the size of the grid will change - going from a 3x3 to then 5x5 then a 7x7 grid.
+
+##### The placement of the images will be done in a random manner where a random number generator will be used to select the index of the box on the grid, so in level 1 there will be three random numbers which will correspond to the boxes, level 2 there will be 5 and then in level 3 there will be 7.
+
 ***
 
 ### ***Getting Started***
 
-##### Sign up and sign in as a new user and then begin viewing the different sections of the website.
-##### A Trello board was used to keep track of development progress and can be viewed [here](URL).
-##### The project was deployed and can be viewed [here](URL).
-***
+##### The user will be presented with a start screen where they can click start to play the game. in each level if the user is unable to get it correct, then there will be a 'retry' button - allowing them to do that level again where the code will again randomly select three indexes for images to be placed
+
+****
 
 ### ***Screenshots***
 
 ##### image header 1
-![Smile](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.PDlm3trgAkY6pGPcbRt4SQHaEK%26pid%3DApi&f=1)
+
 
 ##### image header 2
-![Scared](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.buntINTHFLyDODyMKXNYcgHaEK%26pid%3DApi&f=1)
-***
 
-### ***Future Updates***
 
-- [ ] Future Update 1
-- [ ] Future Update 2
-- [x] Completed Update
-- [x] ~~Strikethrough~~ Items Also
-***
 
 ### ***Credits***
 
-##### Funny Images: [DuckDuckGo Search](http://www.duckduckgo.com)
-
-##### Markdown Guide: [ia.net](https://ia.net/writer/support/general/markdown-guide)
-
-##### Markdown Cheatsheet: [GitHub](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 ***
