@@ -11,51 +11,70 @@ let cardTwo = null
 document.querySelectorAll('.innerBoard').forEach((parentElement) => {
   parentElement.addEventListener('click', (event) => {
     // console.log('You clicked me')
-    const childElement = event.target.firstChild;
+    const childElement = event.target.firstChild
     // console.log(childElement)
-    const value = childElement.innerText;
+    const value = childElement.innerText
     console.log(value)
     // Display the childElement
-    childElement.style.display = 'flex';
-    
-      if (cardOne === null) {
-          cardOne = value
-      } else if (cardTwo === null) {
-          cardTwo = value
-      } else {
-        console.log('something is wrong with the value storer')
-      }
-      console.log(cardOne, cardTwo)
-    // const cardOne = value
+    childElement.style.display = 'flex'
+
+    if (cardOne === null) {
+      cardOne = value
+    } else if (cardTwo === null) {
+      cardTwo = value
+    } else {
+      console.log('something is wrong with the value storer')
+    }
+
+    console.log(cardOne, cardTwo)
+
+    // Create a function that checks if two cards are a match
+    function matchChecker() {
+      return cardOne === cardTwo
+    }
+
+    console.log(matchChecker())
+
     // If this is the second card that was flipped over check if it is a match
-
-    // If they match then run match logic / function
-
-    // If they don't match hide both cards
+    if (cardTwo !== null) {
+      console.log(cardOne, cardTwo)
+      if (matchChecker()) {
+        console.log(`its a match`)
+        // If they match then run match logic / function then initialise cardOne and cardTwo
+        // triggerMatch()
+      } else {
+        console.log(`its not a match`)
+        // If they don't match hide both cards then initialise cardOne and cardTwo
+        // triggerNotMatch()
+      }
+    }
   })
 })
-
-
-
-
-
-// console.log(cardOne)
-// Create a function that check if two cards are a match
 
 // Create a function that handles a match
 // Inside this function make the two cards that match unclickable
 // Also inside this function check if the game is over
+function triggerMatch() {
+  parentElement.removeEventListener()
+}
 
+// Create a function that handles not a match
+// Inside this function make the two cards that match clickable, and remove
+function triggerNotMatch() {}
 
-
-
-
-
-
-
-
-
-
+// console.log(cardOne)
+// Create a function that checks if two cards are a match
+// function matchChecker() {
+//   return cardOne === cardTwo
+//   // if (cardOne === cardTwo) {
+//   //   console.log(`its a match`)
+//   //   return true
+//   // } else if (cardOne !== cardTwo) {
+//   //   return false
+//   // } else {
+//   //   console.log('issue with match checker')
+//   // }
+// }
 
 // // GLobal variables
 // const gameBoard = document.getElementById('wholeBoard').innerText
