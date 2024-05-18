@@ -6,6 +6,18 @@
   justify-content: center;
   margin: 0;
   text-align: center;
+  background-color: rgb(9, 137, 110);
+  color: whitesmoke;
+}
+
+.topText {
+  text-align: center;
+  justify-content: center;
+  color: whitesmoke;
+}
+
+.gamePage {
+  background-color: rgb(9, 137, 110);
 }
 
 .gameplaybuttons {
@@ -13,6 +25,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 20px;
+  padding: auto;
 }
 
 #wholeBoard {
@@ -21,7 +34,6 @@
   width: 375px;
   height: 375px;
   display: grid;
-  color: rgb(0, 0, 0);
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 5px;
@@ -31,6 +43,8 @@
   width: 120px;
   height: 120px;
   border: 1px solid #000000;
+  background-color: white;
+  color: rgb(9, 137, 110);
   font-size: 40px;
   display: flex;
   justify-content: center;
@@ -39,5 +53,5 @@
 
 .innertext {
   display: none;
-/* rest state is where none of the numbers are showing. */
+  /* rest state is where none of the numbers are showing. */
 }
