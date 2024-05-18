@@ -6,6 +6,7 @@ const textInside = document.getElementsByClassName('innertext')
 
 let cardOne = null
 let cardTwo = null
+let currentSelection = [cardOne, cardTwo]
 // Declare and initialize cardOne and cardTwo
 
 document.querySelectorAll('.innerBoard').forEach((parentElement) => {
@@ -38,14 +39,21 @@ document.querySelectorAll('.innerBoard').forEach((parentElement) => {
     // If this is the second card that was flipped over check if it is a match
     if (cardTwo !== null) {
       console.log(cardOne, cardTwo)
+
       if (matchChecker()) {
         console.log(`its a match`)
         // If they match then run match logic / function then initialise cardOne and cardTwo
-        // triggerMatch()
+        forEach()
+        cardOne = null
+        cardTwo = null
+          console.log(cardOne, cardTwo)
       } else {
         console.log(`its not a match`)
         // If they don't match hide both cards then initialise cardOne and cardTwo
-        // triggerNotMatch()
+        // event.target.firstChild.style.display = 'none'
+        cardOne.style.display = 'none'
+          cardOne = null
+          cardTwo = null
       }
     }
   })
@@ -54,13 +62,20 @@ document.querySelectorAll('.innerBoard').forEach((parentElement) => {
 // Create a function that handles a match
 // Inside this function make the two cards that match unclickable
 // Also inside this function check if the game is over
-function triggerMatch() {
-  parentElement.removeEventListener()
-}
+
+// function triggerMatch() {
+//   childElement.removeEventListener()
+//   childElement.style.color = 'green'
+// }
 
 // Create a function that handles not a match
-// Inside this function make the two cards that match clickable, and remove
-function triggerNotMatch() {}
+// Inside this function make the two cards that match non clickable, and remove event listener
+
+// function triggerNotMatch() {
+//   childElement.style.display = 'none'
+//   cardOne = null
+//   cardTwo = null
+// }
 
 // console.log(cardOne)
 // Create a function that checks if two cards are a match
