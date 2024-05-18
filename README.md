@@ -18,6 +18,8 @@ GA SEI - Unit 1 Project
 
 ##### the aim of the game is to find all the matches.
 
+##### game has also been deployed at link: gridr.surge.sh
+
 ---
 
 ### **_Getting Started_**
@@ -33,5 +35,7 @@ GA SEI - Unit 1 Project
 ![alt text](image-1.png)
 
 ### **_Credits_**
+
 #### I credit this project and my progress so far to the dedicated instructors at GA Bahrian that have taught me everyting i know about the world of software engineering and have sacrificed their time to help me learn.
+
 ---
