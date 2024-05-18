@@ -4,60 +4,75 @@ const gameBoard = document.getElementById('wholeBoard').innerText
 const eachBox = document.getElementsByClassName('innerBoard')
 const textInside = document.getElementsByClassName('innertext')
 
+// Declare and initialize cardOne and cardTwo
 let cardOne = null
 let cardTwo = null
-let currentSelection = [cardOne, cardTwo]
-// Declare and initialize cardOne and cardTwo
+
+const matchChecker = () => {
+  return cardOne.innerText === cardTwo.innerText
+}
 
 document.querySelectorAll('.innerBoard').forEach((parentElement) => {
   parentElement.addEventListener('click', (event) => {
-    // console.log('You clicked me')
     const childElement = event.target.firstChild
-    // console.log(childElement)
     const value = childElement.innerText
     console.log(value)
     // Display the childElement
-    childElement.style.display = 'flex'
+    childElement.style.display = 'block'
 
     if (cardOne === null) {
-      cardOne = value
+      cardOne = childElement
+      console.log('Card 1 was selected. Value is ')
+      console.log(cardOne.innerText)
     } else if (cardTwo === null) {
-      cardTwo = value
+      cardTwo = childElement
+      console.log('Card 2 was selected. Value is ')
+      console.log(cardTwo.innerText)
     } else {
       console.log('something is wrong with the value storer')
     }
 
-    console.log(cardOne, cardTwo)
-
-    // Create a function that checks if two cards are a match
-    function matchChecker() {
-      return cardOne === cardTwo
-    }
-
-    console.log(matchChecker())
-
     // If this is the second card that was flipped over check if it is a match
     if (cardTwo !== null) {
-      console.log(cardOne, cardTwo)
+      const isMatch = matchChecker()
 
-      if (matchChecker()) {
-        console.log(`its a match`)
+      console.log('Is it a match?')
+      console.log(isMatch)
+
+      if (isMatch) {
         // If they match then run match logic / function then initialise cardOne and cardTwo
-        forEach()
-        cardOne = null
-        cardTwo = null
-          console.log(cardOne, cardTwo)
+        console.log(`Inside isMatch true block...`)
+        // TODO Remove event listeners
       } else {
-        console.log(`its not a match`)
-        // If they don't match hide both cards then initialise cardOne and cardTwo
-        // event.target.firstChild.style.display = 'none'
+        console.log(`Inside isMatch false block...`)
+        // TODO The delay part. If they don't match hide both cards after a delay
         cardOne.style.display = 'none'
-          cardOne = null
-          cardTwo = null
+        cardTwo.style.display = 'none'
       }
+      // Set both cards to null again
+      cardOne = null
+      cardTwo = null
     }
   })
 })
+
+// Create a function that handles a match
+// Inside this function make the two cards that match unclickable
+// Also inside this function check if the game is over
+
+// function triggerMatch() {
+//   childElement.removeEventListener()
+//   childElement.style.color = 'green'
+// }
+
+// Create a function that handles not a match
+// Inside this function make the two cards that match non clickable, and remove event listener
+
+// function triggerNotMatch() {
+//   childElement.style.display = 'none'
+//   cardOne = null
+//   cardTwo = null
+// }
 
 // Create a function that handles a match
 // Inside this function make the two cards that match unclickable
